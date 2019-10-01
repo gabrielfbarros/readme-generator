@@ -1,4 +1,4 @@
-![logo](https://gitlab.com/uploads/-/system/group/avatar/4474270/vidalink-logo-66x33.png)
+![logo](https://avatars2.githubusercontent.com/u/47756567?s=460&v=4)
 
 # Readme Generator
 
