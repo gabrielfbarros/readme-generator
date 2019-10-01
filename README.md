@@ -6,7 +6,7 @@ Gerador padronizado de arquivos README.md.
 
 ## Technologies
 
-- Bash
+- Shell Script
 
 ## Getting started
 
