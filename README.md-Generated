@@ -1,0 +1,108 @@
+![logo](https://gitlab.com/uploads/-/system/group/avatar/4474270/vidalink-logo-66x33.png)
+
+# {title}
+![dev](https://gitlab.com/vidalink/ds/{project-name}/badges/dev/pipeline.svg)
+![master](https://gitlab.com/vidalink/ds/{project-name}/badges/master/pipeline.svg)
+
+Microserviço para bla, bla, bla.
+
+## Technologies
+
+- .NET Core X.Y
+- MongoDB | Oracle | PostgreSQL
+- Pub/Sub | Hangfire | Firebase
+- Etc
+
+### Tests
+
+- [x] Pipeline - Unit Tests: xUNit e Moq
+- [x] Pipeline - Integration Tests: Test Host e xUNit
+- [x] Manual - Contract Tests: Postman
+
+## Infrastructure
+
+### Application
+
+A aplicação roda dentro do Kubernetes | Cloud Run na GCP. Ambientes utilizados:
+- [CD] Review
+- [CD] Staging
+- [Manual] Production
+
+### Database
+
+O Banco de Dados está em um cluster mongodb na GCP. É utilizado um banco de dados diferente para cada ambiente:
+- Integration Tests
+- Dev
+- Review
+- Staging
+- Production
+
+## Getting started
+
+Para rodar o projeto você precisa ter o [.NET Core X.Y](https://dotnet.microsoft.com/download/dotnet-core/X.Y) instalado na máquina.
+
+Clone o projeto para sua máquina e restaure os pacotes:
+
+```shell
+git clone https://gitlab.com/vidalink/ds/{project-name}
+cd {project-name}/
+dotnet restore src/
+```
+A aplicação está pronta para ser utilizada localmente.
+
+### Building
+
+Após alterar o código garanta que a aplicação está "buildando":
+
+```shell
+dotnet build src/
+```
+
+### Testing
+
+Após alterar o código garanta que os testes da aplicação estão passando:
+
+```shell
+dotnet test src/
+```
+
+### Running
+
+Para rodar a aplicação via dotnet CLI execute:
+
+```shell
+dotnet run -p src/Api
+```
+Para rodar a aplicação via [Docker](https://www.docker.com/products/docker-desktop) execute:
+
+```shell
+docker build . -t {nome-da-imagem}
+docker run -p 5000:5000 -e ASPNETCORE_ENVIRONMENT=development {nome-da-imagem}
+```
+Em ambos os casos a aplicação irá estar disponível em http://localhost:5000/
+
+### Deploying
+
+O deploy ocorre de forma automática para os ambiente de review e staging, basta fazer o push das alterações para o Gitlab e o pipeline irá fazer a integração e deploy do seu código:
+
+```shell
+git add -A
+git commit -m "sua msg aqui"
+git push origin {branch_desejada}
+```
+
+Para verificar o progresso do pipeline clique [aqui](https://gitlab.com/vidalink/ds/{project-name}/pipelines).
+
+## Sonar
+
+Ao rodar o pipeline do Gitlab diversas métricas de qualidade de código serão coletadas pelo Sonar. Verifique o resultado [aqui](http://{sonar-ip}/dashboard?id=vidalink-ds-{project-name}).
+
+## Swagger
+
+// TODO
+
+## Links
+
+Segue um exemplo de utilização para este micro serviço:
+
+- https://link
