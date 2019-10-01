@@ -1,4 +1,4 @@
-![logo](https://avatars2.githubusercontent.com/u/47756567?s=460&v=4)
+![logo](https://avatars2.githubusercontent.com/u/47756567 | width=100px)
 
 # Readme Generator
 
