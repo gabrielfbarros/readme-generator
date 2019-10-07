@@ -99,7 +99,7 @@ Ao rodar o pipeline do Gitlab diversas métricas de qualidade de código serão 
 
 ## Swagger
 
-// TODO
+Ao rodar local o swagger da aplicação estará disponivel em http://localhost:5000/swagger
 
 ## Links
 
